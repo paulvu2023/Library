@@ -1,19 +1,18 @@
 let myLibrary = [];
+let bookname = undefined;
+let author = undefined;
+let pages = undefined;
 
-function Book(name, author, pages) {
-  // the constructor...
+function Book(name, author, pages) {.
   this.name = name;
   this.author = author;
   this.pages = pages;
 }
 
-function addBookToLibrary() {
-  // do stuff here
+function addBookToLibrary(name, author, pages) {
+  let book = new Book(name, author, pages);
+  myLibrary.push(book);
 }
-
-let bookname = undefined;
-let author = undefined;
-let pages = undefined;
 
 document.querySelector('form').onsubmit = () => {
   bookname = document.querySelector('#book').value;
