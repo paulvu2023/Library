@@ -1,17 +1,22 @@
 let myLibrary = [];
 
-function Book() {
+function Book(name, author, pages) {
   // the constructor...
+  this.name = name;
+  this.author = author;
+  this.pages = pages;
 }
 
 function addBookToLibrary() {
   // do stuff here
 }
 
-document.querySelector('form').onsubmit = () => {
-  const bookname = document.querySelector('#book').value;
-  const author = document.querySelector('#author').value;
-  const pages = document.querySelector('#pages').value;
-}
+let bookname = undefined;
+let author = undefined;
+let pages = undefined;
 
-console.log(bookname, author, pages);
+document.querySelector('form').onsubmit = () => {
+  bookname = document.querySelector('#book').value;
+  author = document.querySelector('#author').value;
+  pages = document.querySelector('#pages').value;
+}
