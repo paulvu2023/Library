@@ -19,8 +19,10 @@ document.querySelector('form').onsubmit = () => {
   author = document.querySelector('#author').value;
   pages = document.querySelector('#pages').value;
   addBookToLibrary(bookname, author, pages);
-
+  bookname = document.querySelector('#book').value = '';
+  author = document.querySelector('#author').value = '';
+  pages = document.querySelector('#pages').value = '';
+  console.log(myLibrary);
   return false;
 }
 
-console.log(myLibrary);
