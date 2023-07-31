@@ -3,7 +3,7 @@ let bookname = undefined;
 let author = undefined;
 let pages = undefined;
 
-function Book(name, author, pages) {.
+function Book(name, author, pages) {
   this.name = name;
   this.author = author;
   this.pages = pages;
@@ -18,4 +18,9 @@ document.querySelector('form').onsubmit = () => {
   bookname = document.querySelector('#book').value;
   author = document.querySelector('#author').value;
   pages = document.querySelector('#pages').value;
+  addBookToLibrary(bookname, author, pages);
+
+  return false;
 }
+
+console.log(myLibrary);
