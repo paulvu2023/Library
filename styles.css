@@ -13,6 +13,7 @@ h1 {
     display: flex;
     justify-content: center;
     gap: 20px;
+    color: #1a571c;
 }
 
 h1 img {
