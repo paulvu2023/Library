@@ -8,10 +8,6 @@ body {
     grid-template-rows: 250px 1fr;
 }
 
-.top {
-
-}
-
 h1 {
     font-size: 60px;
     display: flex;
@@ -21,4 +17,16 @@ h1 {
 
 h1 img {
     height: 70px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    
+}
+
+select {
+    font-size: 15px;
+    padding: 10px;
+    padding-right: 15px;
 }
