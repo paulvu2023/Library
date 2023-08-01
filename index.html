@@ -16,15 +16,21 @@
             Library
         </h1>
         <form>
-            <label for="book">Book:</label><br>
-            <input autocomplete="off" type="text" id="book" name="book"><br>
-            <label for="author">Author:</label><br>
-            <input autocomplete="off" type="author" id="author" name="author">
-            <label for="read">Status:</label>
-            <select name="read" id="read">
-                <option value="read" selected>Read</option>
-                <option value="notread">Not Read</option>
-            </select>
+            <div>
+                <label for="book">Book:</label>
+                <input autocomplete="off" type="text" id="book" name="book">
+            </div>
+            <div>
+                <label for="author">Author:</label>
+                <input autocomplete="off" type="author" id="author" name="author">
+            </div>
+            <div>
+                <label for="read">Status:</label>
+                <select name="read" id="read">
+                    <option value="read" selected>Read</option>
+                    <option value="notread">Not Read</option>
+                </select>
+            </div>
             <input type="submit" value="Add Book">
         </form>
     </div>
