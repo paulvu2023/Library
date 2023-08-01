@@ -91,6 +91,7 @@ select {
     font-size: 30px;
     display: grid;
     justify-content: center;
+    align-items: center;
     grid-template-rows: repeat(3, 1fr);
 }
 
