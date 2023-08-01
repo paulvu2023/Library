@@ -33,7 +33,8 @@ form div {
 
 input {
     height: 100%;
-    border: 1px solid gray;
+    outline: 1px solid gray;
+    border: none;
     border-radius: 6px;
 }
 
