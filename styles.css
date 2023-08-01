@@ -73,3 +73,11 @@ select {
 .button:active {
     background-color: rgb(20, 73, 20);
 }
+
+.bottom {
+    background-color:rgb(241, 252, 239);
+}
+
+.card {
+    background-color: white;
+}
