@@ -10,7 +10,10 @@ function Book(name, author, read) {
 }
 
 Book.prototype.displayBook = function () {
-
+  const body = document.querySelector('body');
+  const card = document.createElement('div');
+  card.classList.add('card');
+  body.appendChild(card);
 }
 
 function addBookToLibrary(name, author, read) {
