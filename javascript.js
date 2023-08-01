@@ -9,12 +9,20 @@ function Book(name, author, read) {
   this.read = read;
 }
 
-Book.prototype.displayBook = function (name, author, read) {
+Book.prototype.displayBook = function (bookName, bookAuthor, bookRead) {
   const bottom = document.querySelector('div.bottom');
   const card = document.createElement('div');
+  const name = document.createElement('div');
+  const author = document.createElement('div');
+  const read = document.createElement('div');
   card.classList.add('card');
   bottom.appendChild(card);
-
+  name.textContent = `"${bookName}"`;
+  author.textContent = `${bookAuthor}`;
+  read.textContent = `${bookRead}`;
+  card.appendChild(name);
+  card.appendChild(author);
+  card.appendChild(read);
 }
 
 function addBookToLibrary(name, author, read) {
