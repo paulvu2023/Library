@@ -9,16 +9,17 @@ function Book(name, author, read) {
   this.read = read;
 }
 
-Book.prototype.displayBook = function () {
-  const body = document.querySelector('body');
+Book.prototype.displayBook = function (name, author, read) {
+  const bottom = document.querySelector('div.bottom');
   const card = document.createElement('div');
   card.classList.add('card');
-  body.appendChild(card);
+  bottom.appendChild(card);
+
 }
 
 function addBookToLibrary(name, author, read) {
   let book = new Book(name, author, read);
-  book.displayBook();
+  book.displayBook(name, author, read);
   myLibrary.push(book);
 }
 
