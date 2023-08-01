@@ -88,5 +88,12 @@ select {
     max-width: 300px;
     border-radius: 12px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    font-size: 30px;
+    display: grid;
+    justify-content: center;
+    grid-template-rows: repeat(3, 1fr);
 }
 
+.card div {
+    text-align: center;
+}
