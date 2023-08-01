@@ -38,3 +38,13 @@ select {
     padding: 10px;
     padding-right: 15px;
 }
+
+.button {
+    display: flex;
+    align-self: end;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 11px;
+    font-size: 15px;
+    border: 1px solid black;
+}
