@@ -81,6 +81,7 @@ select {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     width: 100%;
+    justify-content: start;
 }
 
 .card {
