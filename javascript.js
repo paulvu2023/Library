@@ -24,6 +24,9 @@ Book.prototype.displayBook = function () {
     author.textContent = `${book.author}`;
     read.textContent = `${book.read}`;
     read.value = `"${book.name}"`;
+    read.addEventListener('click', function() {
+      console.log(this.value); // 'this' now refers to the clicked button
+    });
     bottom.appendChild(card);
     card.appendChild(name);
     card.appendChild(author);
@@ -48,6 +51,3 @@ document.querySelector('form').onsubmit = () => {
   return false;
 }
 
-//document.querySelector('button').onclick = () => {
-
-//}
