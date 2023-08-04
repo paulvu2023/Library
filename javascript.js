@@ -23,6 +23,7 @@ Book.prototype.displayBook = function () {
     name.textContent = `"${book.name}"`;
     author.textContent = `${book.author}`;
     read.textContent = `${book.read}`;
+    read.value = `"${book.name}"`;
     bottom.appendChild(card);
     card.appendChild(name);
     card.appendChild(author);
@@ -47,6 +48,6 @@ document.querySelector('form').onsubmit = () => {
   return false;
 }
 
-// document.querySelector('button').onclick = () => {
+//document.querySelector('button').onclick = () => {
 
 //}
