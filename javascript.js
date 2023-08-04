@@ -14,12 +14,14 @@ Book.prototype.displayBook = function (bookName, bookAuthor, bookRead) {
   const card = document.createElement('div');
   const name = document.createElement('div');
   const author = document.createElement('div');
-  const read = document.createElement('div');
+  const read = document.createElement('button');
+
+
   card.classList.add('card');
-  bottom.appendChild(card);
   name.textContent = `"${bookName}"`;
   author.textContent = `${bookAuthor}`;
   read.textContent = `${bookRead}`;
+  bottom.appendChild(card);
   card.appendChild(name);
   card.appendChild(author);
   card.appendChild(read);
@@ -39,9 +41,6 @@ document.querySelector('form').onsubmit = () => {
   bookname = document.querySelector('#book').value = '';
   author = document.querySelector('#author').value = '';
   pages = document.querySelector('#read').value = 'Read';
-
-  console.log(myLibrary);
-
   return false;
 }
 
