@@ -9,13 +9,13 @@ function Book(name, author, read) {
   this.read = read;
 }
 
-Book.prototype.displayBook = function (bookName, bookAuthor, bookRead) {
+Book.prototype.displayBook = function () {
   const bottom = document.querySelector('div.bottom');
+  bottom.textContent = '';
   const card = document.createElement('div');
   const name = document.createElement('div');
   const author = document.createElement('div');
   const read = document.createElement('button');
-
 
   card.classList.add('card');
   name.textContent = `"${bookName}"`;
@@ -29,7 +29,7 @@ Book.prototype.displayBook = function (bookName, bookAuthor, bookRead) {
 
 function addBookToLibrary(name, author, read) {
   let book = new Book(name, author, read);
-  book.displayBook(name, author, read);
+  book.displayBook();
   myLibrary.push(book);
 }
 
@@ -44,3 +44,6 @@ document.querySelector('form').onsubmit = () => {
   return false;
 }
 
+document.querySelector('button').onclick = () => {
+
+}
