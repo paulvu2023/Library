@@ -12,25 +12,28 @@ function Book(name, author, read) {
 Book.prototype.displayBook = function () {
   const bottom = document.querySelector('div.bottom');
   bottom.textContent = '';
-  const card = document.createElement('div');
-  const name = document.createElement('div');
-  const author = document.createElement('div');
-  const read = document.createElement('button');
+  console.log(myLibrary);
+  myLibrary.forEach((book) => {
+    const card = document.createElement('div');
+    const name = document.createElement('div');
+    const author = document.createElement('div');
+    const read = document.createElement('button');
 
-  card.classList.add('card');
-  name.textContent = `"${bookName}"`;
-  author.textContent = `${bookAuthor}`;
-  read.textContent = `${bookRead}`;
-  bottom.appendChild(card);
-  card.appendChild(name);
-  card.appendChild(author);
-  card.appendChild(read);
+    card.classList.add('card');
+    name.textContent = `"${book.name}"`;
+    author.textContent = `${book.author}`;
+    read.textContent = `${book.read}`;
+    bottom.appendChild(card);
+    card.appendChild(name);
+    card.appendChild(author);
+    card.appendChild(read);
+  })
 }
 
 function addBookToLibrary(name, author, read) {
   let book = new Book(name, author, read);
-  book.displayBook();
   myLibrary.push(book);
+  book.displayBook();
 }
 
 document.querySelector('form').onsubmit = () => {
@@ -44,6 +47,6 @@ document.querySelector('form').onsubmit = () => {
   return false;
 }
 
-document.querySelector('button').onclick = () => {
+// document.querySelector('button').onclick = () => {
 
-}
+//}
