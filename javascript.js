@@ -1,7 +1,5 @@
 let myLibrary = [];
-let bookname = undefined;
-let author = undefined;
-let read = undefined;
+
 
 function Book(name, author, read) {
   this.name = name;
@@ -23,7 +21,7 @@ Book.prototype.displayBook = function () {
     name.textContent = `"${book.name}"`;
     author.textContent = `${book.author}`;
     read.textContent = `${book.read}`;
-    read.value = `"${book.name}"`;
+    read.value = `${book.name}`;
     read.addEventListener('click', function() {
       changeReadStatus(this.value); // Send name of book as argument
     });
@@ -36,14 +34,20 @@ Book.prototype.displayBook = function () {
 
 function changeReadStatus(bookName){
   myLibrary.forEach((book) => {
-    if (book.name === bookName) {
-
+    if (book.name == bookName) {
+      if (book.read == "Read"){
+        book.read = "Not Read";
+      } else if (book.read == "Not Read"){
+        book.read = "Read";
+      }
     }
   });
+  
+  console.log(myLibrary);
 }
 
-function addBookToLibrary(name, author, read) {
-  let book = new Book(name, author, read);
+function addBookToLibrary(name, author, readValue) {
+  let book = new Book(name, author, readValue);
   myLibrary.push(book);
   book.displayBook();
 }
@@ -51,11 +55,11 @@ function addBookToLibrary(name, author, read) {
 document.querySelector('form').onsubmit = () => {
   bookname = document.querySelector('#book').value;
   author = document.querySelector('#author').value;
-  read = document.querySelector('#read').value;
-  addBookToLibrary(bookname, author, read);
+  const readValue = document.querySelector('#read').value;
+  addBookToLibrary(bookname, author, readValue);
   bookname = document.querySelector('#book').value = '';
   author = document.querySelector('#author').value = '';
-  read = document.querySelector('#read').value = 'Read';
+  document.querySelector('#read').value = 'Read';
   return false;
 }
 
