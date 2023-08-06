@@ -16,6 +16,7 @@ displayBook = function () {
     const name = document.createElement('div');
     const author = document.createElement('div');
     const read = document.createElement('button');
+    const remove = document.createElement('button');
 
     card.classList.add('card');
     name.textContent = `"${book.name}"`;
@@ -25,11 +26,25 @@ displayBook = function () {
     read.addEventListener('click', function() {
       changeReadStatus(this.value); // Send name of book as argument
     });
+    remove.textContent = 'Remove';
+    remove.value = `${book.name}`;
+    remove.addEventListener('click', function() {
+      removeBook(this.value); // Send name of book as argument
+    });
+
     bottom.appendChild(card);
     card.appendChild(name);
     card.appendChild(author);
     card.appendChild(read);
+    card.appendChild(remove);
   })
+}
+
+function removeBook(bookName){
+  myLibrary = myLibrary.filter((book) => {
+    return book.name !== bookName;
+  });
+  displayBook();
 }
 
 function changeReadStatus(bookName){
