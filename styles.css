@@ -93,6 +93,7 @@ select {
 
 .card {
     background-color: white;
+    max-height: 500px;
     min-height: 250px;
     max-width: 300px;
     border-radius: 12px;
