@@ -42,7 +42,7 @@ function changeReadStatus(bookName){
       }
     }
   });
-  
+  displayBook();
   console.log(myLibrary);
 }
 
