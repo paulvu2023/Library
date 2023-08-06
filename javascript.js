@@ -7,7 +7,7 @@ function Book(name, author, read) {
   this.read = read;
 }
 
-Book.prototype.displayBook = function () {
+displayBook = function () {
   const bottom = document.querySelector('div.bottom');
   bottom.textContent = '';
   console.log(myLibrary);
@@ -49,7 +49,7 @@ function changeReadStatus(bookName){
 function addBookToLibrary(name, author, readValue) {
   let book = new Book(name, author, readValue);
   myLibrary.push(book);
-  book.displayBook();
+  displayBook();
 }
 
 document.querySelector('form').onsubmit = () => {
