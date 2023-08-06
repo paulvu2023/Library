@@ -8,8 +8,8 @@ function Book(name, author, read) {
 }
 
 displayBook = function () {
-  const bottom = document.querySelector('div.bottom');
-  bottom.textContent = '';
+  const cards = document.querySelector('div.cards');
+  cards.textContent = '';
   console.log(myLibrary);
   myLibrary.forEach((book) => {
     const card = document.createElement('div');
@@ -32,7 +32,7 @@ displayBook = function () {
       removeBook(this.value); // Send name of book as argument
     });
 
-    bottom.appendChild(card);
+    cards.appendChild(card);
     card.appendChild(name);
     card.appendChild(author);
     card.appendChild(read);
