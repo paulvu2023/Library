@@ -27,6 +27,7 @@ displayBook = function () {
       changeReadStatus(this.value); // Send name of book as argument
     });
     remove.textContent = 'Remove';
+    remove.classList.add('remove');
     remove.value = `${book.name}`;
     remove.addEventListener('click', function() {
       removeBook(this.value); // Send name of book as argument

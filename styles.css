@@ -58,6 +58,10 @@ select {
 .button {
     display: flex;
     align-self: end;
+}
+
+.button, button {
+    border: none;
     background-color: #4CAF50; /* Green */
     color: white;
     padding: 12px;
@@ -67,13 +71,21 @@ select {
     transition: all 0.3s ease-in-out;
 }
 
-.button:hover {
+.button:hover, button:hover {
     transform: scale(0.9);
     background-color: rgb(82, 151, 82);
 }
 
-.button:active {
+.button:active, button:active {
     background-color: rgb(20, 73, 20);
+}
+
+.remove {
+    background: rgb(248, 84, 84);
+}
+
+.remove:hover {
+    background-color: rgb(231, 7, 7);
 }
 
 .bottom {
@@ -93,7 +105,7 @@ select {
 
 .card {
     background-color: white;
-    max-height: 500px;
+    max-height: 300px;
     min-height: 250px;
     max-width: 300px;
     border-radius: 12px;
@@ -109,3 +121,4 @@ select {
 .card div {
     text-align: center;
 }
+
